@@ -35,12 +35,14 @@ func TestStringS(t *testing.T) {
 	var result []string
 	starter := []string{"this", "is", "a"}
 	var curried func(...[]string) []int = StringS(starter)
+
 	fmt.Println("should accept 1 new slice and return it appended to the first")
 	one := []string{"slice", "of", "strings"}
 	result = curried(one)
 	if equals.StringS(result, []string{"this", "is", "a", "slice", "of", "strings"}) {
 		t.Errorf("Expected 'this starts a string' and got %v", result)
 	}
+
 	fmt.Println("should accept any number of new strings and return them appended to the first in order")
 	two := []string{"that", "just"}
 	three := []string{"keeps", "on"}
@@ -58,12 +60,14 @@ func TestIntS(t *testing.T) {
 	var result []int
 	starter := []int{1, 2, 3}
 	var curried func(...[]int) []int = IntS(starter)
+
 	fmt.Println("should accept 1 new slice and return it appended to the first")
 	one := []int{4, 5, 6}
 	result = curried(one)
 	if equals.IntS(result, []int{1, 2, 3, 4, 5, 6}) {
 		t.Errorf("Expected 'this starts a string' and got %v", result)
 	}
+
 	fmt.Println("should accept any number of new strings and return them appended to the first in order")
 	two := []int{7, 8}
 	three := []int{9, 10}
@@ -80,12 +84,14 @@ func TestFloatS(t *testing.T) {
 	var result []float64
 	starter := []float64{1, 2, 3}
 	var curried func(...[]float64) []float64 = FloatS(starter)
+
 	fmt.Println("should accept 1 new slice and return it appended to the first")
 	one := []float64{4, 5, 6}
 	result = curried(one)
 	if equals.FloatS(result, []float64{1, 2, 3, 4, 5, 6}) {
 		t.Errorf("Expected 'this starts a string' and got %v", result)
 	}
+
 	fmt.Println("should accept any number of new strings and return them appended to the first in order")
 	two := []float64{7, 8}
 	three := []float64{9, 10}
@@ -102,12 +108,14 @@ func TestBoolS(t *testing.T) {
 	var result []bool
 	starter := []bool{true, false}
 	var curried func(...[]bool) []bool = BoolS(starter)
+
 	fmt.Println("should accept 1 new slice and return it appended to the first")
 	one := []bool{true, false}
 	result = curried(one)
 	if equals.BoolS(result, []bool{true, false, true, false}) {
 		t.Errorf("Expected 'this starts a string' and got %v", result)
 	}
+
 	fmt.Println("should accept any number of new strings and return them appended to the first in order")
 	two := []bool{true, false}
 	three := []bool{true, false}
@@ -125,12 +133,14 @@ func TestRuneS(t *testing.T) {
 	var result []rune
 	starter := []rune{'a', 'b'}
 	var curried func(...[]rune) []rune = RuneS(starter)
+
 	fmt.Println("should accept 1 new slice and return it appended to the first")
 	one := []rune{'a', 'b'}
 	result = curried(one)
 	if equals.RuneS(result, []rune{'a', 'b', 'a', 'b'}) {
 		t.Errorf("Expected 'this starts a string' and got %v", result)
 	}
+
 	fmt.Println("should accept any number of new strings and return them appended to the first in order")
 	two := []rune{'a', 'b'}
 	three := []rune{'a', 'b'}
@@ -148,12 +158,14 @@ func TestByteS(t *testing.T) {
 	var result []byte
 	starter := []byte{'a', 'b'}
 	var curried func(...[]byte) []byte = ByteS(starter)
+
 	fmt.Println("should accept 1 new slice and return it appended to the first")
 	one := []byte{'a', 'b'}
 	result = curried(one)
 	if equals.ByteS(result, []byte{'a', 'b', 'a', 'b'}) {
 		t.Errorf("Expected 'this starts a string' and got %v", result)
 	}
+
 	fmt.Println("should accept any number of new strings and return them appended to the first in order")
 	two := []byte{'a', 'b'}
 	three := []byte{'a', 'b'}
