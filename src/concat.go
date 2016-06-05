@@ -5,7 +5,7 @@ func StringS(base []string) (func(...[]string)([]string)) {
   for _, v := range base {
     result = append(result, v)
   }
-	return func(lists ...[]) ([]string) {
+	return func(lists ...[]) []string {
     for _, list := range lists {
       for _, v := range list {
         result = append(result, v)

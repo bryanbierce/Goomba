@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	equals "github.com/bryanbierce/Goomba/src/equals"
+	Equals "github.com/bryanbierce/Goomba/src/equals"
 )
 
 // func TestString(t *testing.T) {
@@ -39,7 +39,7 @@ func TestStringS(t *testing.T) {
 	fmt.Println("should accept 1 new slice and return it appended to the first")
 	one := []string{"slice", "of", "strings"}
 	result = curried(one)
-	if equals.StringS(result, []string{"this", "is", "a", "slice", "of", "strings"}) {
+	if Equals.StringS(result, []string{"this", "is", "a", "slice", "of", "strings"}) {
 		t.Errorf("Expected 'this starts a string' and got %v", result)
 	}
 
@@ -49,7 +49,7 @@ func TestStringS(t *testing.T) {
 	four := []string{"growing", "longer"}
 	result = curried(one, two, three, four)
 	expected := []string{"this", "is", "a", "slice", "of", "strings", "that", "just", "keeps", "on", "growing", "longer"}
-	if equals.StringS(result, expected) {
+	if Equals.StringS(result, expected) {
 		t.Errorf("Expected 'This starts a string which will grow as long as it is asked. As long as this function works.' and got %v", result)
 	}
 }
@@ -64,7 +64,7 @@ func TestIntS(t *testing.T) {
 	fmt.Println("should accept 1 new slice and return it appended to the first")
 	one := []int{4, 5, 6}
 	result = curried(one)
-	if equals.IntS(result, []int{1, 2, 3, 4, 5, 6}) {
+	if Equals.IntS(result, []int{1, 2, 3, 4, 5, 6}) {
 		t.Errorf("Expected 'this starts a string' and got %v", result)
 	}
 
@@ -73,7 +73,7 @@ func TestIntS(t *testing.T) {
 	three := []int{9, 10}
 	four := []int{11, 12}
 	result = curried(one, two, three, four)
-	if equals.IntS(result, []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}) {
+	if Equals.IntS(result, []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}) {
 		t.Errorf("Expected 'This starts a string which will grow as long as it is asked. As long as this function works.' and got %v", result)
 	}
 }
@@ -88,7 +88,7 @@ func TestFloatS(t *testing.T) {
 	fmt.Println("should accept 1 new slice and return it appended to the first")
 	one := []float64{4, 5, 6}
 	result = curried(one)
-	if equals.FloatS(result, []float64{1, 2, 3, 4, 5, 6}) {
+	if Equals.FloatS(result, []float64{1, 2, 3, 4, 5, 6}) {
 		t.Errorf("Expected 'this starts a string' and got %v", result)
 	}
 
@@ -97,7 +97,7 @@ func TestFloatS(t *testing.T) {
 	three := []float64{9, 10}
 	four := []float64{11, 12}
 	result = curried(one, two, three, four)
-	if equals.FloatS(result, []float64{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}) {
+	if Equals.FloatS(result, []float64{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}) {
 		t.Errorf("Expected 'This starts a string which will grow as long as it is asked. As long as this function works.' and got %v", result)
 	}
 }
@@ -112,7 +112,7 @@ func TestBoolS(t *testing.T) {
 	fmt.Println("should accept 1 new slice and return it appended to the first")
 	one := []bool{true, false}
 	result = curried(one)
-	if equals.BoolS(result, []bool{true, false, true, false}) {
+	if Equals.BoolS(result, []bool{true, false, true, false}) {
 		t.Errorf("Expected 'this starts a string' and got %v", result)
 	}
 
@@ -122,7 +122,7 @@ func TestBoolS(t *testing.T) {
 	four := []bool{true, false}
 	result = curried(one, two, three, four)
 	expected := []bool{true, false, true, false, true, false, true, false, true, false}
-	if equals.BoolS(result, expected) {
+	if Equals.BoolS(result, expected) {
 		t.Errorf("Expected 'This starts a string which will grow as long as it is asked. As long as this function works.' and got %v", result)
 	}
 }
@@ -137,7 +137,7 @@ func TestRuneS(t *testing.T) {
 	fmt.Println("should accept 1 new slice and return it appended to the first")
 	one := []rune{'a', 'b'}
 	result = curried(one)
-	if equals.RuneS(result, []rune{'a', 'b', 'a', 'b'}) {
+	if Equals.RuneS(result, []rune{'a', 'b', 'a', 'b'}) {
 		t.Errorf("Expected 'this starts a string' and got %v", result)
 	}
 
@@ -147,7 +147,7 @@ func TestRuneS(t *testing.T) {
 	four := []rune{'a', 'b'}
 	result = curried(one, two, three, four)
 	expected := []rune{'a', 'b', 'a', 'b', 'a', 'b', 'a', 'b', 'a', 'b'}
-	if equals.RuneS(result, expected) {
+	if Equals.RuneS(result, expected) {
 		t.Errorf("Expected 'This starts a string which will grow as long as it is asked. As long as this function works.' and got %v", result)
 	}
 }
@@ -162,7 +162,7 @@ func TestByteS(t *testing.T) {
 	fmt.Println("should accept 1 new slice and return it appended to the first")
 	one := []byte{'a', 'b'}
 	result = curried(one)
-	if equals.ByteS(result, []byte{'a', 'b', 'a', 'b'}) {
+	if Equals.ByteS(result, []byte{'a', 'b', 'a', 'b'}) {
 		t.Errorf("Expected 'this starts a string' and got %v", result)
 	}
 
@@ -172,7 +172,7 @@ func TestByteS(t *testing.T) {
 	four := []byte{'a', 'b'}
 	result = curried(one, two, three, four)
 	expected := []byte{'a', 'b', 'a', 'b', 'a', 'b', 'a', 'b', 'a', 'b'}
-	if equals.ByteS(result, expected) {
+	if Equals.ByteS(result, expected) {
 		t.Errorf("Expected 'This starts a string which will grow as long as it is asked. As long as this function works.' and got %v", result)
 	}
 }
